@@ -18,9 +18,18 @@ function fizzBuzz(input) {
     }
 
 }
-
 console.log(fizzBuzz('A')); // not a number
 console.log(fizzBuzz(15)); // FizzBuzz
 console.log(fizzBuzz(27)); // Fizz
 console.log(fizzBuzz(17)); // 17
 console.log(fizzBuzz(100)); // Buzz
+
+
+function reverseString(str) {
+    let reverse = '';
+    for(let i = str.length - 1; i >= 0; i--) {
+        reverse = reverse + str[i];
+        console.log(reverse);
+    }
+}
+reverseString('Hello World!');
