@@ -33,3 +33,11 @@ function reverseString(str) {
     }
 }
 reverseString('Hello World!');
+
+
+function celsius2Fahrenheit(value) {
+    return (value * 9 / 5) + 32;
+}
+console.log(celsius2Fahrenheit(0));
+console.log(celsius2Fahrenheit(10));
+console.log(celsius2Fahrenheit(100));
