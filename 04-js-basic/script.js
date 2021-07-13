@@ -4,11 +4,11 @@ function fizzBuzz(input) {
         restThree = input % 3;
         restFive = input % 5;
 
-        if((restThree == 0) && (restFive == 0)) {
+        if((restThree === 0) && (restFive === 0)) {
             return 'FizzBuzz';
-        } else if(restThree == 0) {
+        } else if(restThree === 0) {
             return 'Fizz';
-        } else if(restFive == 0) {
+        } else if(restFive === 0) {
             return 'Buzz';
         } else {
             return input;
