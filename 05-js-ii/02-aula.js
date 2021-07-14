@@ -59,3 +59,36 @@ console.log(numeros.filter(value => value % 3 == 0));
 
 // reduce
 console.log(numeros.reduce((previous, current) => previous + current));
+
+// 06
+// objects destructuring
+let book = {
+    title: "Torto Arado",
+    author: "Itamar Vieira Junior",
+    pages: 300
+}
+
+let {title, author, pages} = book;
+console.log(author);
+
+let books = [
+    {
+        title: "Torto Arado",
+        author: "Itamar Vieira Junior",
+        pages: 300
+    },
+    {
+        title: "Harry Potter e a pedra filosofal",
+        author: "J. K. Rowling",
+        pages: 400
+    },
+    {
+        title: "Senhor dos Anéis",
+        author: "Tolkien",
+        pages: 1000
+    }
+]
+
+for(let {title, author, pages} of books) {
+    console.log(`${title} is written by ${author} and it has ${pages} pages.`);
+}
