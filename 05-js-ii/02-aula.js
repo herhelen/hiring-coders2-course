@@ -38,3 +38,24 @@ let mediaStatus = (n1, n2) => {
 };
 console.log(mediaStatus(10, 9));
 console.log(mediaStatus(0, 1));
+
+// 05
+// Spread ...object/array
+// map, filter, reduce
+let numeros = [];
+for(let i = 0; i < 10; i++) {
+    numeros.push(i);
+}
+console.log(numeros);
+// usa spread para adicionar novos elementos ao array
+numeros = [...numeros, 10, 11];
+console.log(numeros);
+
+// map => aplicar uma função em todos elementos
+console.log(numeros.map(value => value * value));
+
+// filter => filtrar elementos usando retorno de uma função
+console.log(numeros.filter(value => value % 3 == 0));
+
+// reduce
+console.log(numeros.reduce((previous, current) => previous + current));
