@@ -1,5 +1,6 @@
-function fizzBuzz(input) {
 
+// Exercises
+function fizzBuzz(input) {
     if(typeof input === 'number') {
         restThree = input % 3;
         restFive = input % 5;
@@ -41,3 +42,46 @@ function celsius2Fahrenheit(value) {
 console.log(celsius2Fahrenheit(0));
 console.log(celsius2Fahrenheit(10));
 console.log(celsius2Fahrenheit(100));
+
+
+const listContainer = document.querySelector('[data-lists]');
+const listForm = document.querySelector('[data-new-list-form]');
+const listInput = document.querySelector('[data-new-list-input]');
+
+let todos = []
+
+function clearList() {
+    while(listContainer.hasChildNodes()) {
+        listContainer.removeChild(listContainer.firstChild)
+    }
+}
+
+function renderList() {
+    clearList();
+    todos.forEach(function(item) {
+        const el = document.createElement('li')
+        el.classList.add('item')
+        el.id = item.id
+        el.innerText = item.value
+        listContainer.appendChild(el)
+    })
+}
+
+function createItem(item) {
+    return {'id': Date.now(), 'value': item}
+}
+
+listForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    listInputValue = listInput.value;
+
+    if(listInputValue === null || listInputValue === '' ) return
+
+    todos.push(createItem(listInputValue));
+    console.log(todos);
+
+    listInput.value = null;
+
+    renderList();
+})
+
